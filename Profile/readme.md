@@ -2,7 +2,7 @@
 
 Location:
 
-    C:\Users\\$env:USERNAME\Documents\WindowsPowerShell\Profile.ps1
+    C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Profile.ps1
 
 Description:
 
