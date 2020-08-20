@@ -9,3 +9,9 @@ Function drm {docker rm (docker ps -a -q)}
 
 #Alias for the Windows Subsystem for Linux text editor (pico).
 Function pico {wsl pico}
+
+Function list_modules {dir C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Modules}
+
+Function update_profile {
+    Copy-Item C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Profile.ps1 C:\Users\$env:USERNAME\Documents\powershell\Profile
+}
