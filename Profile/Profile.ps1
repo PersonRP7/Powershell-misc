@@ -34,3 +34,9 @@ Function update_git
     git commit -m "$comment"
     git push -u origin master
 }
+
+#Removes all local docker images
+Function dra
+{
+	docker images -a -q | % { docker image rm $_ -f }
+}
