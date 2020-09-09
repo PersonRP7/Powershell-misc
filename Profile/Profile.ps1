@@ -47,3 +47,9 @@ Function rmr
 {
 	docker rm -f $(docker ps -a -q)
 }
+
+#Alias for Start-BitsTransfer. Used for downloading files to the current directory.
+Function dl($source)
+{
+	Start-BitsTransfer -Source $source
+}
