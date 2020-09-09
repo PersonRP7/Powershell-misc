@@ -40,3 +40,10 @@ Function dra
 {
 	docker images -a -q | % { docker image rm $_ -f }
 }
+
+#Removes all running docker containers, obviating the need for 
+#engaging docker-compose in the local directory.
+Function rmr
+{
+	docker rm -f $(docker ps -a -q)
+}
