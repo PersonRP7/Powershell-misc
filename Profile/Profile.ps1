@@ -1,6 +1,3 @@
-#Basic syntax.
-Function hello {Write-Host "Hello World"}
-
 #Reads the contents of the profile script holding various aliases.
 Function read {cat C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Profile.ps1}
 
