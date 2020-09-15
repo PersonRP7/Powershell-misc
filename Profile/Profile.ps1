@@ -50,3 +50,8 @@ Function dl($source)
 {
 	Start-BitsTransfer -Source $source
 }
+
+Function rmv()
+{
+	ECHO Y | docker volume prune
+}
