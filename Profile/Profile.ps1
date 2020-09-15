@@ -51,6 +51,7 @@ Function dl($source)
 	Start-BitsTransfer -Source $source
 }
 
+#Sends an affirmative response to the standard input, then purges all docker volumes.
 Function rmv()
 {
 	ECHO Y | docker volume prune
