@@ -1,0 +1,1 @@
+Get-ChildItem C:\\ -Recurse -Hidden .git | Out-File -FilePath "./git_data.txt"
