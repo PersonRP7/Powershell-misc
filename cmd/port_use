@@ -1,0 +1,2 @@
+Ports in use:
+	netstat -a -b
