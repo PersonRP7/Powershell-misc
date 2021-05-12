@@ -62,3 +62,9 @@ Function activate()
 {
 	./env/Scripts/Activate.ps1
 }
+
+#Run Server (basic) Runs Django development server at default port 8000.
+Function rsb()
+{
+	python manage.py runserver
+}
