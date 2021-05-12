@@ -56,3 +56,9 @@ Function rmv()
 {
 	ECHO Y | docker volume prune
 }
+
+#Activates a python virtual environment.
+Function activate()
+{
+	./env/Scripts/Activate.ps1
+}
