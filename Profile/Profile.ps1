@@ -68,3 +68,9 @@ Function rsb()
 {
 	python manage.py runserver
 }
+
+#Run Django server on the meta address.
+Function rs()
+{
+	python manage.py runserver 0.0.0.0:8000
+}
