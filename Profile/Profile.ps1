@@ -74,3 +74,16 @@ Function rs()
 {
 	python manage.py runserver 0.0.0.0:8000
 }
+
+#Searches the user's directory for a specified directory.
+Function wd($query_parameter)
+{
+	ls C:\\Users\$env:USERNAME *$query_parameter* -Recurse -Directory | select fullname
+}
+
+#Searches the user's directory for a specified file.
+Function wf($query_parameter)
+{
+	ls C:\\Users\$env:USERNAME *$query_parameter* -Recurse -File | select fullname
+}
+
