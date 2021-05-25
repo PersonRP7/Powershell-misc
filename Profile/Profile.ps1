@@ -1,5 +1,7 @@
 #Reads the contents of the profile script holding various aliases.
 Function read {cat C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Profile.ps1}
+#Set color for the text under quotations.
+Set-PSReadLineOption -Colors @{ String = 'red' }
 
 #Removes all exited docker containers.
 Function drm {docker rm (docker ps -a -q)}
@@ -82,7 +84,8 @@ Function wd($query_parameter)
 }
 
 #Searches the user's directory for a specified file.
-Function wf($query_parameter)
+#wf conflicts with Windows firewall.
+Function wfi($query_parameter)
 {
 	ls C:\\Users\$env:USERNAME *$query_parameter* -Recurse -File | select fullname
 }
