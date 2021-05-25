@@ -3,6 +3,17 @@ Function read {cat C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Profile.ps
 #Set color for the text under quotations.
 Set-PSReadLineOption -Colors @{ String = 'red' }
 
+#Update git from the current directory
+Function g
+{
+    param(
+        [string]$comment=$(throw "A comment must be added for git commit.")
+    )
+    git add -A
+    git commit -m "$comment"
+    git push -u origin master
+}
+
 #Removes all exited docker containers.
 Function drm {docker rm (docker ps -a -q)}
 
